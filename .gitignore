@@ -1,3 +1,6 @@
+.sandbox-home
+.claw
+.sandbox-tmp
 # Rust
 src-rust/target/
 

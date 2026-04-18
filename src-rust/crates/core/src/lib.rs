@@ -1164,7 +1164,7 @@ pub mod config {
                 Some("deepinfra") => "meta-llama/Llama-3.3-70B-Instruct",
                 Some("github-copilot") => "gpt-4o",
                 Some("ollama") => "llama3.2",
-                Some("lmstudio") => "default",
+                Some("lmstudio") => std::env::var("LM_STUDIO_MODEL").unwrap_or_else(|_| "unsloth/qwen3.6-35b-a3b".to_string()).leak(),
                 Some("llamacpp") => "default",
                 Some("custom-openai") => "default",
                 Some("azure") => "gpt-4o",
